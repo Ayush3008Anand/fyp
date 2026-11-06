@@ -13,17 +13,20 @@ env/
 .env.*
 !.env.example
 
-# MIMIC-IV and other raw data
+# Ignore CSV files globally
 *.csv
 *.csv.gz
 
-# Project data: ignore everything by default
+# Ignore everything inside data by default
 data/**
 
-# Allow Git to access data subdirectories
+# Allow access to data subdirectories
 !data/
 !data/**/
 
+# Allow CSV files inside data
+!data/**/*.csv
+!data/**/*.csv.gz
 # Allow Excel files inside data/
 !data/**/*.xlsx
 !data/**/*.xls
